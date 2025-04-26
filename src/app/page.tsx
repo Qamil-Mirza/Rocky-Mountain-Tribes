@@ -28,6 +28,18 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <section className="p-6">
+        <h2 className="text-center font-bold text-4xl mb-2">Introduction</h2>
+        <p>
+          Rocky Mountain National Park rests on the ancestral lands of many
+          Indigenous Nations whose deep-rooted ties to this region span
+          thousands of years. Long before these mountains were marked by park
+          boundaries, Tribal peoples lived with, moved through, and held
+          ceremonies across these peaks and valleys—hunting, gathering, and
+          sustaining traditions passed down through generations.
+        </p>
+      </section>
     </div>
   );
 }
