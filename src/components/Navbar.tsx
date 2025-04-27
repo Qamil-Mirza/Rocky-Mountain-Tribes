@@ -108,7 +108,7 @@ export function NavBar({ transparent = false }: { transparent?: boolean }) {
         </nav>
 
         {/* Mobile menu button - positioned to the right on mobile */}
-        <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
+        <button className="md:hidden hover:cursor-pointer" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
           {mobileMenuOpen ? (
             <X
               className={cn("h-6 w-6", transparent && !scrolled ? "text-white" : "text-primaryText dark:text-white")}
