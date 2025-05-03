@@ -15,7 +15,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "TEK", href: "/tek" },
-  { label: "Climate Adaptation", href: "/climate" },
+  { label: "Climate Adaptation", href: "/climate-adaptation" },
   { label: "Policy", href: "/policy" },
   { label: "Resources", href: "/resources" },
   { label: "About", href: "/about" },
