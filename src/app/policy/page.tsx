@@ -19,13 +19,16 @@ function page() {
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="p-3">
           <h1 className="relative z-20 text-center text-6xl font-bold tracking-tighter text-primary mb-4">
-            Climate Change and Adaptation
+            Tourism and Policy
           </h1>
           <p className="relative z-20 text-center text-2xl font-light tracking-tighter text-primary">
-            Understanding the impacts of climate change on Rocky Mountain
-            National Park and the strategies for adaptation.
+            Understanding the impact of tourism on Indigineous well-being and the policies that can mitigate it.
           </p>
         </div>
+      </section>
+
+      <section>
+        <h2></h2>
       </section>
     </div>
   );
