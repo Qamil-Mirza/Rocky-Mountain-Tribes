@@ -3,32 +3,40 @@ import Image from "next/image";
 import { NavBar } from "@/components/Navbar";
 import tek_bg from "@/public/images/tek-background.jpg";
 import Timeline from "@/components/Timeline";
-import { CaseStudyCard } from "@/components/CaseStudyCard";
+import CaseStudyCard from "@/components/CasestudyCard";
+
+/* Image imports */
+import aridUteMountain from "@/public/images/arid-ute-mountain.jpg";
+import blackfeetBison from "@/public/images/blackfeet-bison.jpg";
+import uteBurn from "@/public/images/ute-burn.jpg";
 
 // CASE STUDY DATA
 const caseStudies = [
   {
     id: "1",
-    title: "E-commerce Platform Redesign",
-    description: "How we increased conversion rates by 45% through UX improvements and performance optimization.",
-    image: "/placeholder.svg?height=300&width=500",
+    title: "Ute Mountain Ute Tribe, Colorado: Stewarding Arid Lands",
+    description:
+      "The Ute Mountain Ute Tribe combines traditional dryland farming techniques with sustainable irrigation systems to grow corn, beans, and squash — sustaining cultural practices and enhancing food sovereignty.",
+    image: aridUteMountain.src,
     url: "/case-studies/ecommerce-redesign",
   },
   {
     id: "2",
-    title: "Financial App Dashboard",
-    description: "Creating an intuitive dashboard that helped users better understand and manage their finances.",
-    image: "/placeholder.svg?height=300&width=500",
+    title: "Blackfeet Nation, Montana: The Return of the Buffalo",
+    description:
+      "The Blackfeet’s Iinnii Initiative focuses on restoring bison to Blackfeet lands, revitalizing traditional hunting, grazing rotation, and spiritual practices linked to prairie ecosystem balance and biodiversity.",
+    image: blackfeetBison.src,
     url: "/case-studies/financial-dashboard",
   },
   {
     id: "3",
-    title: "Healthcare Patient Portal",
-    description: "Designing an accessible patient portal that improved patient engagement and satisfaction.",
-    image: "/placeholder.svg?height=300&width=500",
+    title: "Southern Ute Tribe, Colorado: Burning for Balance",
+    description:
+      "The Southern Ute apply controlled burning to manage forests, increase wildlife habitat, and revitalize ancestral fire stewardship suppressed by federal fire policy which is a practice that enhances biodiversity and reduces wildfire risk.",
+    image: uteBurn.src,
     url: "/case-studies/healthcare-portal",
   },
-]
+];
 
 function page() {
   return (
@@ -59,12 +67,22 @@ function page() {
       <section className="p-6">
         <h2 className="text-center font-bold text-4xl mb-2">Introduction</h2>
         <p>
-          a dynamic, place-based understanding of the relationships between
-          living beings and their environment, developed by Indigenous
-          communities and long-term local communities over centuries through
-          direct interaction with nature. It encompasses knowledge, practices,
-          and beliefs passed down through generations, integrating ecological,
-          social and cultural dimensions.​
+          Nestled within the diverse landscapes of the Rocky Mountains,
+          Indigenous communities have cultivated deep, intergenerational
+          relationships with the land for millennia. Central to their ways of
+          life is Traditional Ecological Knowledge (TEK) — a dynamic,
+          place-based understanding of ecosystems rooted in cultural values,
+          spiritual beliefs, and practical experience. Far from being static
+          folklore, TEK reflects a holistic environmental ethic that integrates
+          observation, oral history, seasonal cycles, and sustainable practices.
+          Among the Rocky Mountain tribes — including the Blackfeet, Shoshone,
+          Ute, and Salish — TEK informs land stewardship, fire management, plant
+          harvesting, and wildlife tracking in ways that modern science is only
+          beginning to appreciate. As the climate crisis intensifies, the
+          resurgence and recognition of Indigenous ecological knowledge offer
+          not just a blueprint for resilience, but a reimagining of human-nature
+          relationships grounded in respect, reciprocity, and long-term
+          sustainability.
         </p>
       </section>
 
@@ -109,14 +127,29 @@ function page() {
       </section>
 
       <section className="p-6">
-        <h2 className="text-center font-bold text-4xl mb-2">
+        <h2 className="text-center font-bold text-4xl mb-6">
           TEK Case Studies
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {caseStudies.map((caseStudy) => (
-          <CaseStudyCard key={caseStudy.id} caseStudy={caseStudy} />
-        ))}
-      </div>
+        <div className="flex flex-wrap justify-center mb-6 gap-10">
+          <CaseStudyCard
+            title={caseStudies[0].title}
+            description={caseStudies[0].description}
+            image={caseStudies[0].image}
+            url={caseStudies[0].url}
+          />
+          <CaseStudyCard
+            title={caseStudies[1].title}
+            description={caseStudies[1].description}
+            image={caseStudies[1].image}
+            url={caseStudies[1].url}
+          />
+          <CaseStudyCard
+            title={caseStudies[2].title}
+            description={caseStudies[2].description}
+            image={caseStudies[2].image}
+            url={caseStudies[2].url}
+          />
+        </div>
       </section>
     </div>
   );
