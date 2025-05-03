@@ -5,7 +5,6 @@ import { ChartZoom } from "@/components/Chartzoom";
 import StatCard from "@/components/StatCard";
 import { ArrowBigUp, Plus } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
 /* Image imports */
