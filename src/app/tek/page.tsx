@@ -4,6 +4,9 @@ import { NavBar } from "@/components/Navbar";
 import tek_bg from "@/public/images/tek-background.jpg";
 import Timeline from "@/components/Timeline";
 import CaseStudyCard from "@/components/CasestudyCard";
+import { Waypoints, Recycle, Podcast, HandHeart, Mountain } from "lucide-react";
+import HighlightCard from "@/components/HighlightCard";
+import ChallengeCarousel from "@/components/ChallengeCarousel";
 
 /* Image imports */
 import aridUteMountain from "@/public/images/arid-ute-mountain.jpg";
@@ -38,6 +41,43 @@ const caseStudies = [
   },
 ];
 
+// Carousel data
+// Sample challenge data
+const challenges = [
+  {
+    id: 1,
+    title: "Land Dispossession",
+    description:
+      "Forced removals broke tribal ties to sacred sites, with 98% of Rocky Mountain lands lost.",
+    image: aridUteMountain.src,
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "Language Erosion",
+    description:
+      "Fewer native speakers threaten TEK transfer; only 20% now speak tribal languages fluently.",
+    image: aridUteMountain.src,
+    link: "/articles/digital-transformation",
+  },
+  {
+    id: 3,
+    title: "Climate Change",
+    description:
+      "Shifting seasons disrupt TEK signals like harvest timing and animal migration patterns.",
+    image: aridUteMountain.src,
+    link: "/articles/ai-ethics",
+  },
+  {
+    id: 4,
+    title: "Policy Barriers",
+    description:
+      "TEK is sidelined in land decisions due to federal bias toward Western science.",
+    image: aridUteMountain.src,
+    link: "/articles/cybersecurity",
+  },
+];
+
 function page() {
   return (
     <div className="bg-background min-h-screen">
@@ -65,44 +105,72 @@ function page() {
       </section>
 
       <section className="p-6">
-        <h2 className="text-center font-bold text-4xl mb-2">Introduction</h2>
+        <h2 className="text-center font-bold text-4xl mb-2">What Is TEK?</h2>
         <p>
-          Nestled within the diverse landscapes of the Rocky Mountains,
-          Indigenous communities have cultivated deep, intergenerational
-          relationships with the land for millennia. Central to their ways of
-          life is Traditional Ecological Knowledge (TEK) — a dynamic,
-          place-based understanding of ecosystems rooted in cultural values,
-          spiritual beliefs, and practical experience. Far from being static
-          folklore, TEK reflects a holistic environmental ethic that integrates
-          observation, oral history, seasonal cycles, and sustainable practices.
-          Among the Rocky Mountain tribes — including the Blackfeet, Shoshone,
-          Ute, and Salish — TEK informs land stewardship, fire management, plant
-          harvesting, and wildlife tracking in ways that modern science is only
-          beginning to appreciate. As the climate crisis intensifies, the
-          resurgence and recognition of Indigenous ecological knowledge offer
-          not just a blueprint for resilience, but a reimagining of human-nature
-          relationships grounded in respect, reciprocity, and long-term
-          sustainability.
+          <span className="font-bold">
+            Traditional Ecological Knowledge (TEK)
+          </span>{" "}
+          is a cumulative, intergenerational body of knowledge, practices, and
+          beliefs about the relationships between humans, plants, animals,
+          landscapes, and spiritual systems, developed by Indigenous peoples
+          through sustained interaction with their environments. For Rocky
+          Mountain tribes like the Blackfeet, Ute, and Shoshone-Bannock, TEK
+          encompasses sustainable hunting, fishing, fire management, and
+          seasonal migration practices rooted in deep ecological understanding.
+          It differs from Western science by emphasizing holistic, place-based
+          wisdom transmitted orally and through lived experience.
         </p>
       </section>
 
       <section className="p-6">
-        <h2 className="text-center font-bold text-4xl mb-2">
-          History & Significance
+        <h2 className="text-center font-bold text-4xl mb-6">
+          Core Principles of TEK
         </h2>
-        <p>
-          Rocky Mountain National Park now showcases some of the most iconic
-          landscapes of the southern Rocky Mountains, including over 60 peaks
-          above 12,000 feet and panoramic views of the Continental Divide. It
-          protects a variety of natural habitats, from montane and subalpine
-          forests to one of the best-preserved tundra ecosystems in the region.
-          There was once an abundance of Native Americans living on these lands
-          with tribes such as Ute, Cheyenne, Arapaho and Comanche. It’s
-          acknowledged that these are dying communities as more recreational
-          areas are put up.
-        </p>
+        <div className="flex flex-wrap justify-center mb-6 gap-10">
+          <HighlightCard
+            title="Holistic Interconnectedness"
+            description="TEK views humans as part of ecological and spiritual networks, rejecting the separation of 'nature' and 'culture'"
+            icon={<Waypoints />}
+            iconbgcolor="bg-black"
+            shineColors={["#1f2937", "#374151", "#4b5563"]}
+            buttonText=""
+          />
+          <HighlightCard
+            title="Adaptive sustainability"
+            description=" Practices evolve over millennia to balance human needs with ecological carrying capacity (e.g., controlled burns for forest health)"
+            icon={<Recycle />}
+            iconbgcolor="bg-black"
+            shineColors={["#1f2937", "#374151", "#4b5563"]}
+            buttonText=""
+          />
+          <HighlightCard
+            title="Intergenerational transmission"
+            description=" Knowledge is shared through storytelling, ceremonies, and mentorship by elders"
+            icon={<Podcast />}
+            iconbgcolor="bg-black"
+            shineColors={["#1f2937", "#374151", "#4b5563"]}
+            buttonText=""
+          />
+          <HighlightCard
+            title="Ethical stewardship"
+            description=" Resources are managed with respect, reciprocity, and minimal waste (e.g., honoring animal spirits after a hunt)"
+            icon={<HandHeart />}
+            iconbgcolor="bg-black"
+            shineColors={["#1f2937", "#374151", "#4b5563"]}
+            buttonText=""
+          />
+          <HighlightCard
+            title="Place-based specificity"
+            description="TEK is tied to ancestral lands, reflecting localized ecological patterns and cultural identity"
+            icon={<Mountain />}
+            iconbgcolor="bg-black"
+            shineColors={["#1f2937", "#374151", "#4b5563"]}
+            buttonText=""
+          />
+        </div>
       </section>
 
+      {/* Timeline Section 
       <section className="px-6 pt-6">
         <h2 className="text-center font-bold text-4xl mb-2">
           Timeline of Events
@@ -125,7 +193,7 @@ function page() {
           TEK concept of sense of place to preserve that codependence.
         </p>
       </section>
-
+      */}
       <section className="p-6">
         <h2 className="text-center font-bold text-4xl mb-6">
           TEK Case Studies
@@ -149,6 +217,15 @@ function page() {
             image={caseStudies[2].image}
             url={caseStudies[2].url}
           />
+        </div>
+      </section>
+
+      <section className="p-6">
+        <h2 className="text-center font-bold text-4xl mb-6">
+          TEK and Modern Challenges
+        </h2>
+        <div className="flex flex-wrap justify-center mb-6 gap-10">
+          <ChallengeCarousel challenges={challenges} />
         </div>
       </section>
     </div>

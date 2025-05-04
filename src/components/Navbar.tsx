@@ -18,7 +18,6 @@ const navItems: NavItem[] = [
   { label: "Climate Adaptation", href: "/climate-adaptation" },
   { label: "Policy", href: "/policy" },
   { label: "Resources", href: "/resources" },
-  { label: "About", href: "/about" },
 ];
 
 export function NavBar({ transparent = false }: { transparent?: boolean }) {

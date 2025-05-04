@@ -18,15 +18,30 @@ interface HighlightCardProps {
   icon?: JSX.Element;
   iconbgcolor?: string;
   shineColors?: string[];
+  buttonText?: string;
 }
 
-function HighlightCard({ title, description, url, icon, iconbgcolor, shineColors }: HighlightCardProps) {
+function HighlightCard({
+  title,
+  description,
+  url,
+  icon,
+  iconbgcolor,
+  shineColors,
+  buttonText = "Explore",
+}: HighlightCardProps) {
   return (
     <Card className="relative overflow-hidden max-w-[350px] w-full py-6">
-      <ShineBorder shineColor={shineColors || ["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+      <ShineBorder
+        shineColor={shineColors || ["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+      />
       <CardHeader className="text-center space-y-2">
         {icon && (
-          <div className={`mx-auto flex h-12 w-12 items-center justify-center rounded-full ${iconbgcolor || 'bg-primary'} text-primary`}>
+          <div
+            className={`mx-auto flex h-12 w-12 items-center justify-center rounded-full ${
+              iconbgcolor || "bg-primary"
+            } text-primary`}
+          >
             {icon}
           </div>
         )}
@@ -37,9 +52,13 @@ function HighlightCard({ title, description, url, icon, iconbgcolor, shineColors
       </CardHeader>
       <CardContent className="flex justify-center items-center">
         <Link href={url || "#"}>
-          <Button variant="outline" className="w-full hover:cursor-pointer">
-            Explore
-          </Button>
+          {buttonText ? (
+            <Button variant="outline" className="w-full hover:cursor-pointer">
+              {buttonText}
+            </Button>
+          ) : (
+            <></>
+          )}
         </Link>
       </CardContent>
     </Card>
