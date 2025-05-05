@@ -8,6 +8,14 @@ import Image from "next/image";
 
 // IMAGE IMPORTS
 import aridUteMountain from "@/public/images/arid-ute-mountain.jpg";
+import aicf from "@/public/ngo/AICF.png";
+import culturalSurvival from "@/public/ngo/cultural-survival.jpg";
+import narf from "@/public/ngo/NARF.png";
+import pwna from "@/public/ngo/pwna.jpg";
+import dic from "@/public/ngo/dic.png";
+import onwt from "@/public/ngo/onwt.jpg";
+import berkeleyLibrary from "@/public/ngo/berkeley-library.jpg";
+import nk360 from "@/public/ngo/nk360.jpg";
 
 // MOCK DATA
 // Sample data
@@ -17,7 +25,7 @@ const organizations = [
     description:
       "Legal organization dedicated to asserting and defending the rights of Indian tribes and organizations.",
     link: "https://www.narf.org/",
-    image: aridUteMountain.src,
+    image: narf.src,
     tribes: ["Multiple Tribes"],
   },
   {
@@ -25,7 +33,7 @@ const organizations = [
     description:
       "Provides scholarships and support for Native American students and tribal colleges.",
     link: "https://collegefund.org/",
-    image: aridUteMountain.src,
+    image: aicf.src,
     tribes: ["Multiple Tribes"],
   },
   {
@@ -33,35 +41,52 @@ const organizations = [
     description:
       "Cultural Survival advocates for Indigenous Peoples' rights and supports Indigenous communities’ self-determination, cultures and political resilience since 1972.",
     link: "https://www.culturalsurvival.org/",
-    image: aridUteMountain.src,
+    image: culturalSurvival.src,
+    tribes: ["Multiple Tribes"],
+  },
+  {
+    title: "Partnership With Native Americans",
+    description:
+      "501 (c)(3) nonprofit organization committed to championing hope for a brighter future for Native Americans living on remote, isolated and impoverished reservations",
+    link: "https://nativepartnership.org/",
+    image: pwna.src,
+    tribes: ["Multiple Tribes"],
+  },
+  {
+    title: "Denver Indian Center",
+    description:
+      "The Denver Indian Center supports Southwest and Plains tribes with resources for stability and education, and serves as a hub for powwows and community events.",
+    link: "https://denverindiancenter.org/",
+    image: dic.src,
+    tribes: ["Multiple Tribes"],
+  },
+  {
+    title: "One Nation Walking Together",
+    description:
+      "One Nation Walking Together provides humanitarian aid to Native American reservations in the U.S. and Mexico.",
+    link: "https://www.onenationwt.org/",
+    image: onwt.src,
     tribes: ["Multiple Tribes"],
   },
 ];
 
-const articles = [
+const websites = [
   {
-    title: "Traditional Ecological Knowledge of the Rocky Mountains",
+    title:
+      "Indigenous Peoples of California, Resources at the UC Berkeley Library",
     description:
-      "Academic paper exploring indigenous knowledge systems related to Rocky Mountain ecosystems.",
-    link: "#",
-    image: aridUteMountain.src,
-    tribes: ["Blackfeet", "Shoshone", "Salish"],
-  },
-  {
-    title: "The Ute People: History and Contemporary Life",
-    description:
-      "Comprehensive article about the history, culture, and modern challenges of the Ute tribes.",
-    link: "https://www.southernute-nsn.gov/history/",
-    image: aridUteMountain.src,
-    tribes: ["Ute"],
-  },
-  {
-    title: "Indigenous Place Names in the Rocky Mountains",
-    description:
-      "Research on original indigenous place names and their meanings throughout the mountain range.",
-    link: "#",
-    image: aridUteMountain.src,
+      "A digital guide to the collections held at The Bancroft Library relating to Indigenous communities in present-day California.",
+    link: "https://guides.lib.berkeley.edu/IndigenousCABancroft",
+    image: berkeleyLibrary.src,
     tribes: ["Multiple Tribes"],
+  },
+  {
+    title: "Native Knowledge 360",
+    description:
+      "Native Knowledge 360° (NK360°) offers educational resources for teaching accurate Native American histories and cultures.",
+    link: "https://americanindian.si.edu/nk360",
+    image: nk360.src,
+    tribes: ["Ute"],
   },
 ];
 
@@ -122,8 +147,6 @@ const books = [
 function page() {
   return (
     <div className="flex min-h-screen flex-col">
-      <NavBar transparent={true} />
-
       <section className="p-3 relative bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen">
         <Image
           src={aridUteMountain.src}
@@ -154,8 +177,8 @@ function page() {
                 <TabsTrigger value="ngos" className="hover:cursor-pointer">
                   NGOs
                 </TabsTrigger>
-                <TabsTrigger value="articles" className="hover:cursor-pointer">
-                  Articles
+                <TabsTrigger value="websites" className="hover:cursor-pointer">
+                  Websites
                 </TabsTrigger>
                 <TabsTrigger value="videos" className="hover:cursor-pointer">
                   Videos
@@ -189,18 +212,18 @@ function page() {
               <section>
                 <h2 className="text-2xl font-bold mb-4 flex items-center">
                   <BookOpen className="mr-2" />
-                  Articles & Publications
+                  Websites & Articles
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {articles.map((article, index) => (
+                  {websites.map((website, index) => (
                     <ResourceCard
                       key={index}
-                      title={article.title}
-                      description={article.description}
-                      link={article.link}
-                      type="Article"
-                      image={article.image}
-                      tribes={article.tribes}
+                      title={website.title}
+                      description={website.description}
+                      link={website.link}
+                      type="Website"
+                      image={website.image}
+                      tribes={website.tribes}
                     />
                   ))}
                 </div>
@@ -243,17 +266,17 @@ function page() {
               </div>
             </TabsContent>
 
-            <TabsContent value="articles">
+            <TabsContent value="websites">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {articles.map((article, index) => (
+                {websites.map((website, index) => (
                   <ResourceCard
                     key={index}
-                    title={article.title}
-                    description={article.description}
-                    link={article.link}
-                    type="Article"
-                    image={article.image}
-                    tribes={article.tribes}
+                    title={website.title}
+                    description={website.description}
+                    link={website.link}
+                    type="Website"
+                    image={website.image}
+                    tribes={website.tribes}
                   />
                 ))}
               </div>

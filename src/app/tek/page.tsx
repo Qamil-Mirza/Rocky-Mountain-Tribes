@@ -81,9 +81,6 @@ const challenges = [
 function page() {
   return (
     <div className="bg-background min-h-screen">
-      {/* NAVBAR */}
-      <NavBar transparent={true} />
-
       <section className="p-3 relative bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen">
         <Image
           src={tek_bg.src}

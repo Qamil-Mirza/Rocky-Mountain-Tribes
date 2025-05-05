@@ -11,9 +11,6 @@ import rocky_mountain from "@/public/images/rocky-mountain-backdrop.jpg";
 export default function Home() {
   return (
     <div className="bg-background min-h-screen">
-      {/* Navigation Bar */}
-      <NavBar transparent={true} />
-
       {/* Webpage Hero Section */}
       <section className="p-3 relative bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen">
         <Image
