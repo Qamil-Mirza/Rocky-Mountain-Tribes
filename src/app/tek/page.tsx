@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { NavBar } from "@/components/Navbar";
 import tek_bg from "@/public/images/tek-background.jpg";
-import Timeline from "@/components/Timeline";
 import CaseStudyCard from "@/components/CasestudyCard";
 import { Waypoints, Recycle, Podcast, HandHeart, Mountain } from "lucide-react";
 import HighlightCard from "@/components/HighlightCard";
@@ -17,27 +15,19 @@ import uteBurn from "@/public/images/ute-burn.jpg";
 const caseStudies = [
   {
     id: "1",
-    title: "Ute Mountain Ute Tribe, Colorado: Stewarding Arid Lands",
+    title: "'The Buffalo Return': Cultural Revival, Ecological Restoration, and Sovereignty in the Blackfeet Nation",
     description:
-      "The Ute Mountain Ute Tribe combines traditional dryland farming techniques with sustainable irrigation systems to grow corn, beans, and squash — sustaining cultural practices and enhancing food sovereignty.",
-    image: aridUteMountain.src,
-    url: "/case-studies/ecommerce-redesign",
+      "In 2023, the Blackfeet Nation reintroduced bison to their lands, restoring a sacred relative and keystone species. This act revitalizes cultural traditions, strengthens ecological health, and reasserts tribal sovereignty.",
+    image: blackfeetBison.src,
+    url: "/case-studies/buffalo-return",
   },
   {
     id: "2",
-    title: "Blackfeet Nation, Montana: The Return of the Buffalo",
-    description:
-      "The Blackfeet’s Iinnii Initiative focuses on restoring bison to Blackfeet lands, revitalizing traditional hunting, grazing rotation, and spiritual practices linked to prairie ecosystem balance and biodiversity.",
-    image: blackfeetBison.src,
-    url: "/case-studies/financial-dashboard",
-  },
-  {
-    id: "3",
-    title: "Southern Ute Tribe, Colorado: Burning for Balance",
+    title: "Southern Ute Tribe, Colorado: Burning for Balance ",
     description:
       "The Southern Ute apply controlled burning to manage forests, increase wildlife habitat, and revitalize ancestral fire stewardship suppressed by federal fire policy which is a practice that enhances biodiversity and reduces wildfire risk.",
     image: uteBurn.src,
-    url: "/case-studies/healthcare-portal",
+    url: "/case-studies/burning-for-balance",
   },
 ];
 
@@ -207,12 +197,6 @@ function page() {
             description={caseStudies[1].description}
             image={caseStudies[1].image}
             url={caseStudies[1].url}
-          />
-          <CaseStudyCard
-            title={caseStudies[2].title}
-            description={caseStudies[2].description}
-            image={caseStudies[2].image}
-            url={caseStudies[2].url}
           />
         </div>
       </section>
