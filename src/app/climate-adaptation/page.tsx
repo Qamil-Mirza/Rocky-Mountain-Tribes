@@ -96,38 +96,34 @@ function page() {
       </BlurFade>
 
       <BlurFade delay={0.2} inView>
-        <section className="w-full p-6">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-8">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Adaptation Strategies
-              </h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                How the indigineous tribes of the rocky mountains are adapting
-                to climate change
-              </p>
-            </div>
+        <section className="w-full p-6 flex flex-col justify-center bg-background">
+          <h2 className="text-center font-bold text-4xl mb-6">
+            Adaptation Strategies
+          </h2>
+          <p className="text-center text-muted-foreground text-lg mb-6">
+            How the indigineous tribes of the rocky mountains are adapting to
+            climate change
+          </p>
 
-            <div className="flex flex-wrap justify-center mb-6 gap-10">
-              <CasestudyCard
-                title="Enduring Drought and Enduring Injustice: The Struggles of the Ute Tribe in the Face of Climate Change"
-                description="The Ute Mountain Ute Tribe’s farm in southwestern Colorado has suffered major losses due to worsening drought, limited water access, and lack of infrastructure, forcing them to cut back on crops and lay off workers. The Tribe is now seeking to adapt to these challenges by exploring new irrigation systems, drought-resistant crops, and sustainable farming practices. This case study highlights the intersection of climate change, water rights, and Indigenous sovereignty."
-                image={utedrought.src}
-                url="/case-studies/ute-tribe-climate-change"
-              />
-              <CasestudyCard
-                title="Indigenous Resilience: Culturally Grounded Adaptation in the Face of Climate Change"
-                description="The Blackfeet Nation’s Climate Change Adaptation Plan exemplifies Indigenous-led resilience by integrating traditional knowledge with modern science to address climate threats. Supported by initiatives like the Climate-Ready Tribes Initiative, the plan spans health, agriculture, water, and cultural resources, embedding adaptation into the Nation’s core governance. It reflects a holistic, values-based approach that ties community well-being to environmental stewardship."
-                image={ir.src}
-                url="/case-studies/indigenous-resilience"
-              />
-              <CasestudyCard
-                title="Indigenous Climate Action: Chippewa Cree & Fort Belknap Indian Community Leading the Way"
-                description="The Chippewa Cree Tribe and Fort Belknap Indian Community are advancing climate adaptation in Montana by blending traditional knowledge with science to protect ecosystems and cultural resources. Their efforts—like sweetgrass migration and forest thinning—set a model for Indigenous-led climate resilience. This case study highlights the importance of community engagement and collaboration in addressing climate change."
-                image={ltw.src}
-                url="/case-studies/leading-the-way"
-              />
-            </div>
+          <div className="flex flex-wrap justify-center mb-6 gap-10">
+            <CasestudyCard
+              title="Enduring Drought and Enduring Injustice: The Struggles of the Ute Tribe in the Face of Climate Change"
+              description="The Ute Mountain Ute Tribe’s farm in southwestern Colorado has suffered major losses due to worsening drought, limited water access, and lack of infrastructure, forcing them to cut back on crops and lay off workers. The Tribe is now seeking to adapt to these challenges by exploring new irrigation systems, drought-resistant crops, and sustainable farming practices. This case study highlights the intersection of climate change, water rights, and Indigenous sovereignty."
+              image={utedrought.src}
+              url="/case-studies/ute-tribe-climate-change"
+            />
+            <CasestudyCard
+              title="Indigenous Resilience: Culturally Grounded Adaptation in the Face of Climate Change"
+              description="The Blackfeet Nation’s Climate Change Adaptation Plan exemplifies Indigenous-led resilience by integrating traditional knowledge with modern science to address climate threats. Supported by initiatives like the Climate-Ready Tribes Initiative, the plan spans health, agriculture, water, and cultural resources, embedding adaptation into the Nation’s core governance. It reflects a holistic, values-based approach that ties community well-being to environmental stewardship."
+              image={ir.src}
+              url="/case-studies/indigenous-resilience"
+            />
+            <CasestudyCard
+              title="Indigenous Climate Action: Chippewa Cree & Fort Belknap Indian Community Leading the Way"
+              description="The Chippewa Cree Tribe and Fort Belknap Indian Community are advancing climate adaptation in Montana by blending traditional knowledge with science to protect ecosystems and cultural resources. Their efforts—like sweetgrass migration and forest thinning—set a model for Indigenous-led climate resilience. This case study highlights the importance of community engagement and collaboration in addressing climate change."
+              image={ltw.src}
+              url="/case-studies/leading-the-way"
+            />
           </div>
         </section>
       </BlurFade>

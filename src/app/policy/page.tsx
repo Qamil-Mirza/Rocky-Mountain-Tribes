@@ -8,6 +8,7 @@ import yosemite from "@/public/images/yosemite.jpg";
 import grandcanyon from "@/public/images/grandcanyon.jpg";
 import greatsmoky from "@/public/images/greatsmoky.jpg";
 import { HistoricalTimeline } from "@/components/Timeline";
+import { BlurFade } from "@/components/magicui/blur-fade";
 
 function page() {
   return (
@@ -32,6 +33,7 @@ function page() {
         </div>
       </section>
 
+      <BlurFade delay={0.1} inView>
       <section className="flex flex-col items-center justify-center p-6 bg-background">
         <h2 className="font-bold text-3xl">
           Greater Yellowstone (established 1872)
@@ -71,7 +73,9 @@ function page() {
           deeply managed by its original stewards.
         </p>
       </section>
+      </BlurFade>
 
+      <BlurFade delay={0.2} inView>
       <section className="flex flex-col items-center justify-center p-6 bg-background">
         <h2 className="font-bold text-3xl">
           Rocky Mountain National Park (Established 1915)
@@ -107,7 +111,9 @@ function page() {
           ceased virtually overnight.
         </p>
       </section>
+      </BlurFade>
 
+      <BlurFade delay={0.3} inView>
       <section className="flex flex-col items-center justify-center p-6 bg-background">
         <h2 className="font-bold text-3xl">
           Yosemite National Park (Established 1890){" "}
@@ -141,7 +147,9 @@ function page() {
           tourism infrastructure.
         </p>
       </section>
+      </BlurFade>
 
+      <BlurFade delay={0.4} inView>
       <section className="flex flex-col items-center justify-center p-6 bg-background">
         <h2 className="font-bold text-3xl">
           Grand Canyon National Park (Established 1919)
@@ -172,7 +180,9 @@ function page() {
           Havasupai.
         </p>
       </section>
+      </BlurFade>
 
+      <BlurFade delay={0.5} inView>
       <section className="flex flex-col items-center justify-center p-6 bg-background">
         <h2 className="font-bold text-3xl">
           Great Smoky Mountains National Park (Established 1934)
@@ -204,7 +214,9 @@ function page() {
           knowledge through museums and living-culture villages.
         </p>
       </section>
+      </BlurFade>
 
+      <BlurFade>
       <section className="flex flex-col items-center justify-center p-6 bg-background">
         <h2 className="font-bold text-3xl">Tourism: A doubled-Edged Sword</h2>
         <p className="mb-4">
@@ -247,10 +259,13 @@ function page() {
           legacy.
         </p>
       </section>
+      </BlurFade>
 
+      <BlurFade delay={0.6} inView>
       <section className="flex flex-col items-center justify-center p-6 bg-background">
         <HistoricalTimeline />
       </section>
+      </BlurFade>
     </div>
   );
 }

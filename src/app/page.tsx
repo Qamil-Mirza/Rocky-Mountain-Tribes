@@ -76,7 +76,7 @@ export default function Home() {
             <HighlightCard
               title="Tourism & Policy"
               description="Tourism and government policies often overlook Indigenous voices, yet these communities continue to fight for sovereignty and sustainability."
-              url="/tourism-policy"
+              url="/policy"
               icon={<Globe className="text-blue-500" />}
               iconbgcolor="bg-blue-100"
               shineColors={["#93C5FD", "#60A5FA", "#3B82F6"]}

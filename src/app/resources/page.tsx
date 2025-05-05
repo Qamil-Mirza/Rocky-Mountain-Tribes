@@ -16,6 +16,8 @@ import onwt from "@/public/ngo/onwt.jpg";
 import berkeleyLibrary from "@/public/ngo/berkeley-library.jpg";
 import nk360 from "@/public/ngo/nk360.jpg";
 import resourcebg from "@/public/images/resourcebg.jpg";
+import geobygeoff from "@/public/images/geobygeoff.jpg";
+import sioux from "@/public/images/sioux.jpg";
 
 // MOCK DATA
 // Sample data
@@ -92,28 +94,20 @@ const websites = [
 
 const videos = [
   {
-    title: "Voices of the Shoshone-Bannock",
+    title: "How The Rockies Made The U.S. And Canada So Powerful",
     description:
-      "Documentary featuring elders sharing stories and cultural knowledge of the Shoshone-Bannock tribes.",
-    link: "#",
-    image: aridUteMountain.src,
-    tribes: ["Shoshone", "Bannock"],
-  },
-  {
-    title: "The Blackfeet Nation: Guardians of the Rockies",
-    description:
-      "Film exploring the Blackfeet people's historical and contemporary relationship with the mountains.",
-    link: "#",
-    image: aridUteMountain.src,
-    tribes: ["Blackfeet"],
-  },
-  {
-    title: "Sacred Sites of the Rocky Mountains",
-    description:
-      "Documentary about culturally significant locations and their importance to indigenous communities.",
-    link: "#",
-    image: aridUteMountain.src,
+      "This video covers the vast geography of the Rockies, the human history of exploration and settlement in the region, how the mountain range enabled both countries to grow as powerful as they are, and, finally, what even is considered the Rockies as opposed to another nearby mountain range.",
+    link: "https://youtu.be/17k4q1kThss",
+    image: geobygeoff.src,
     tribes: ["Multiple Tribes"],
+  },
+  {
+    title: "Sioux Tribes History | Lakota Dakota Nakota | Native American Documentary",
+    description:
+      "Learn about the Sioux Nation - their ways of life, old Native American spirituality, migrations, wars and everyday life.",
+    link: "https://youtu.be/CCHZTn5Bk3o",
+    image: sioux.src,
+    tribes: ["Sioux"],
   },
 ];
 
@@ -286,14 +280,8 @@ function page() {
               <h3 className="text-xl font-bold mb-4">Contribute</h3>
               <p>
                 Know of a resource that should be included? Please contact us to
-                suggest additions or corrections to this collection.
+                suggest additions or corrections to this collection. Contact us at qamilmirza@berkeley.edu
               </p>
-              <Button
-                variant="outline"
-                className="mt-4 bg-transparent hover:bg-white hover:text-[#5c4033]"
-              >
-                Submit a Resource
-              </Button>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">Acknowledgment</h3>

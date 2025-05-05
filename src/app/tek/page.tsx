@@ -4,7 +4,7 @@ import tek_bg from "@/public/images/tek-background.jpg";
 import CaseStudyCard from "@/components/CasestudyCard";
 import { Waypoints, Recycle, Podcast, HandHeart, Mountain } from "lucide-react";
 import HighlightCard from "@/components/HighlightCard";
-import ChallengeCarousel from "@/components/ChallengeCarousel";
+import { BlurFade } from "@/components/magicui/blur-fade";
 
 /* Image imports */
 import aridUteMountain from "@/public/images/arid-ute-mountain.jpg";
@@ -91,6 +91,7 @@ function page() {
         </div>
       </section>
 
+      <BlurFade delay={0.1} inView>
       <section className="p-6">
         <h2 className="text-center font-bold text-4xl mb-2">What Is TEK?</h2>
         <p>
@@ -108,7 +109,9 @@ function page() {
           wisdom transmitted orally and through lived experience.
         </p>
       </section>
+      </BlurFade>
 
+      <BlurFade delay={0.2} inView>
       <section className="p-6">
         <h2 className="text-center font-bold text-4xl mb-6">
           Core Principles of TEK
@@ -156,6 +159,7 @@ function page() {
           />
         </div>
       </section>
+      </BlurFade>
 
       {/* Timeline Section 
       <section className="px-6 pt-6">
@@ -181,6 +185,8 @@ function page() {
         </p>
       </section>
       */}
+
+      <BlurFade delay={0.3} inView>
       <section className="p-6">
         <h2 className="text-center font-bold text-4xl mb-6">
           TEK Case Studies
@@ -200,6 +206,7 @@ function page() {
           />
         </div>
       </section>
+      </BlurFade>
 
       {/* 
       <section className="p-6">
