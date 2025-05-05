@@ -15,7 +15,7 @@ import uteBurn from "@/public/images/ute-burn.jpg";
 const caseStudies = [
   {
     id: "1",
-    title: "'The Buffalo Return': Cultural Revival, Ecological Restoration, and Sovereignty in the Blackfeet Nation",
+    title: "'The Buffalo Return: Reviving Culture, Land, and Sovereignty",
     description:
       "In 2023, the Blackfeet Nation reintroduced bison to their lands, restoring a sacred relative and keystone species. This act revitalizes cultural traditions, strengthens ecological health, and reasserts tribal sovereignty.",
     image: blackfeetBison.src,
@@ -201,6 +201,7 @@ function page() {
         </div>
       </section>
 
+      {/* 
       <section className="p-6">
         <h2 className="text-center font-bold text-4xl mb-6">
           TEK and Modern Challenges
@@ -209,6 +210,7 @@ function page() {
           <ChallengeCarousel challenges={challenges} />
         </div>
       </section>
+      */}
     </div>
   );
 }

@@ -17,8 +17,7 @@ function page() {
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <div className="p-3">
           <h1 className="relative z-20 text-center text-6xl font-bold tracking-tighter text-primary mb-4">
-            "The Buffalo Return": Cultural Revival, Ecological Restoration, and
-            Sovereignty in the Blackfeet Nation
+          The Buffalo Return: Reviving Culture, Land, and Sovereignty
           </h1>
         </div>
       </section>
@@ -37,8 +36,7 @@ function page() {
             </span>
           </div>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            "The Buffalo Return": Cultural Revival, Ecological Restoration, and
-            Sovereignty in the Blackfeet Nation
+          The Buffalo Return: Reviving Culture, Land, and Sovereignty
           </h1>
           <hr className="mb-4" />
         </div>

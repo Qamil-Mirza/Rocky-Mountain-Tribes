@@ -3,7 +3,6 @@ import { Building2, BookOpen, Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ResourceCard from "@/components/ResourceCard";
-import { NavBar } from "@/components/Navbar";
 import Image from "next/image";
 
 // IMAGE IMPORTS
@@ -16,6 +15,7 @@ import dic from "@/public/ngo/dic.png";
 import onwt from "@/public/ngo/onwt.jpg";
 import berkeleyLibrary from "@/public/ngo/berkeley-library.jpg";
 import nk360 from "@/public/ngo/nk360.jpg";
+import resourcebg from "@/public/images/resourcebg.jpg";
 
 // MOCK DATA
 // Sample data
@@ -117,39 +117,12 @@ const videos = [
   },
 ];
 
-const books = [
-  {
-    title: "The Utes: A Forgotten People",
-    description:
-      "Comprehensive history of the Ute tribes and their cultural heritage.",
-    link: "#",
-    image: aridUteMountain.src,
-    tribes: ["Ute"],
-  },
-  {
-    title: "Blackfeet Tales of Glacier National Park",
-    description:
-      "Collection of traditional stories and legends from the Blackfeet Nation.",
-    link: "#",
-    image: aridUteMountain.src,
-    tribes: ["Blackfeet"],
-  },
-  {
-    title: "Indigenous Peoples of the Rocky Mountain Region",
-    description:
-      "Academic text covering the diverse indigenous cultures of the Rocky Mountains.",
-    link: "#",
-    image: aridUteMountain.src,
-    tribes: ["Multiple Tribes"],
-  },
-];
-
 function page() {
   return (
     <div className="flex min-h-screen flex-col">
       <section className="p-3 relative bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen">
         <Image
-          src={aridUteMountain.src}
+          src={resourcebg.src}
           alt="Background image of rocky mountains"
           fill
           objectFit="cover"
@@ -182,9 +155,6 @@ function page() {
                 </TabsTrigger>
                 <TabsTrigger value="videos" className="hover:cursor-pointer">
                   Videos
-                </TabsTrigger>
-                <TabsTrigger value="books" className="hover:cursor-pointer">
-                  Books
                 </TabsTrigger>
               </TabsList>
             </div>
@@ -293,22 +263,6 @@ function page() {
                     type="Video"
                     image={video.image}
                     tribes={video.tribes}
-                  />
-                ))}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="books">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {books.map((book, index) => (
-                  <ResourceCard
-                    key={index}
-                    title={book.title}
-                    description={book.description}
-                    link={book.link}
-                    type="Book"
-                    image={book.image}
-                    tribes={book.tribes}
                   />
                 ))}
               </div>

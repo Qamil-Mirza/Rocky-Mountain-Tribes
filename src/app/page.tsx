@@ -6,7 +6,8 @@ import HighlightCard from "@/components/HighlightCard";
 import { Leaf, Flame, Globe } from "lucide-react";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-import rocky_mountain from "@/public/images/rocky-mountain-backdrop.jpg";
+import rockyMountain from "@/public/images/rocky-mountain-backdrop.jpg";
+
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       {/* Webpage Hero Section */}
       <section className="p-3 relative bg-cover bg-center bg-no-repeat flex items-center justify-center h-screen">
         <Image
-          src={rocky_mountain.src}
+          src={rockyMountain.src}
           alt="Background image of rocky mountains"
           fill
           objectFit="cover"
@@ -51,7 +52,7 @@ export default function Home() {
             you navigate our pages, we invite you to reflect on the stories,
             contributions, and futures of these communities, not as distant
             histories, but as living cultures shaping the present and stewarding
-            the future. Through this project, we aim to highlight the following:
+            the future. We aim to highlight the following:
           </p>
 
 

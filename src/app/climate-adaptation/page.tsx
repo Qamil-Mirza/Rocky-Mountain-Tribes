@@ -12,6 +12,7 @@ import CasestudyCard from "@/components/CasestudyCard";
 import utedrought from "@/public/images/arid-ute-mountain.jpg";
 import ir from "@/public/images/ir.png";
 import ltw from "@/public/images/ltw.jpg";
+
 function page() {
   return (
     <div className="bg-background min-h-screen">
